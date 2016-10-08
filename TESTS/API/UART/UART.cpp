@@ -7,7 +7,6 @@
 #include "greentea-client/test_env.h"
 #include "unity.h"
 #include "utest.h"
-//#include "rtos.h"
 
 using namespace utest::v1;
 #define UART_SENTINAL 'x'
@@ -55,7 +54,7 @@ utest::v1::status_t greentea_failure_handler(const Case *const source, const fai
 // Test cases
 // TODO: take pins from config file or from pinnames.h
 Case cases[] = {
-    Case("UART on UART_RX/UART_TX, single byte W/R ", test_uart_single, greentea_failure_handler),
+    Case("Serial - check object definable", test_uart_single, greentea_failure_handler),
 };
 
 Specification specification(test_setup, cases);
