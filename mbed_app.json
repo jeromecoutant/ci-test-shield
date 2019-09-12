@@ -32,7 +32,7 @@
         "PWM_1": "D5",
         "PWM_2": "D6",
         "PWM_3": "D9",
-        "DEBUG_MSG": 0
+        "DEBUG_MSG": 1
     },
     "target_overrides": {
         "*":{
@@ -40,13 +40,17 @@
             "sd.SPI_MOSI"           : "MBED_CONF_APP_SPI_MOSI",
             "sd.SPI_MISO"           : "MBED_CONF_APP_SPI_MISO",
             "sd.SPI_CLK"            : "MBED_CONF_APP_SPI_CLK",
-            "sd.SPI_CS"             : "MBED_CONF_APP_SPI_CS"
+            "sd.SPI_CS"             : "MBED_CONF_APP_SPI_CS",
+            "target.printf_lib"     : "std",
+            "platform.all-stats-enabled": "1"
         },
         "NUCLEO_F070RB": {
+            "SINGLE_THREAD_ONLY": "1",
             "PWM_0": "D4",
             "PWM_2": "D5"
         },
         "NUCLEO_F072RB": {
+             "SINGLE_THREAD_ONLY": "1",
              "AOUT": "A2"
         },
         "NUCLEO_F091RC": {
@@ -58,7 +62,7 @@
              "SINGLE_THREAD_ONLY": "1"
         },
         "NUCLEO_F207ZG": {
-             "AOUT": "D13"
+             "AOUT": "PA_4"
         },
         "NUCLEO_F302R8": {
              "AOUT": "A2"
@@ -67,7 +71,7 @@
              "AOUT": "A2"
         },
         "NUCLEO_F303ZE": {
-             "AOUT": "D13"
+             "AOUT": "PA_4"
         },
         "NUCLEO_F334R8": {
              "AOUT": "A2"
@@ -77,7 +81,7 @@
              "PWM_0": "D0"
         },
         "NUCLEO_F429ZI": {
-             "AOUT": "D13"
+             "AOUT": "PA_4"
         },
         "NUCLEO_F439ZI": {
              "AOUT": "D13"
@@ -86,7 +90,7 @@
              "AOUT": "A2"
         },
         "NUCLEO_F446ZE": {
-             "AOUT": "D13"
+             "AOUT": "PA_4"
         },
         "NUCLEO_F746ZG": {
              "AOUT": "D13"
@@ -95,10 +99,28 @@
              "PWM_1": "D1"
         },
         "NUCLEO_F767ZI": {
-             "AOUT": "D13"
+             "AOUT": "PA_4"
         },
         "DISCO_F769NI": {
              "AOUT": "A1"
+        },
+        "NUCLEO_G071RB": {
+             "AOUT": "A2"
+        },
+        "NUCLEO_G474RE": {
+             "AOUT": "A2"
+        },
+        "NUCLEO_H743ZI": {
+             "AOUT": "PA_4"
+        },
+        "NUCLEO_H743ZI2": {
+             "AOUT": "PA_4"
+        },
+        "NUCLEO_H7A3ZI_Q": {
+             "AOUT": "PA_4"
+        },
+        "DISCO_H747I": {
+             "AOUT": "A0"
         },
         "NUCLEO_L053R8": {
              "AOUT": "A2"
@@ -111,7 +133,8 @@
              "PWM_3": "D4"
         },
         "NUCLEO_L073RZ": {
-             "AOUT": "A2"
+             "AOUT": "A2",
+             "SINGLE_THREAD_ONLY": "1"
         },
         "NUCLEO_L152RE": {
              "AOUT": "A2"
@@ -128,6 +151,42 @@
         },
         "NUCLEO_L486RG": {
              "AOUT": "A2"
+        },
+        "DISCO_L496AG": {
+             "AOUT": "D13"
+        },
+        "NUCLEO_L4R5ZI": {
+             "AOUT": "D13"
+        },
+        "NUCLEO_L4R5ZI_P": {
+             "AOUT": "D13"
+        },
+        "NUCLEO_L496ZG_P": {
+             "AOUT": "D13"
+        },
+        "NUCLEO_L552ZE_Q": {
+             "AOUT": "PA_4"
+        },
+        "NUCLEO_L552ZE_Q_NS": {
+             "AOUT": "D13"
+        },
+        "DISCO_L562QE": {
+             "AOUT": "A2"
+        },
+        "DISCO_L562QE_NS": {
+             "AOUT": "A2"
+        },
+        "NUCLEO_WB15CC": {
+            "PWM_0": "D5",
+            "PWM_3": "D6"
+        },
+        "DISCO_WB5MMG": {
+            "PWM_2": "D9"
+        },
+        "NUCLEO_WL55JC": {
+            "AOUT": "A2",
+            "PWM_0": "D5",
+            "PWM_2": "D9"
         },
         "K64F": {
              "AOUT": "DAC0_OUT",
